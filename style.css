@@ -1,0 +1,73 @@
+/* remove default margin and padding */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /*font family*/
+}
+
+/* main container style */
+main{
+    padding: 2% 0;
+    width: 100%;
+}
+
+/* h1 style */
+main h1
+{
+    text-align: center;  /* center the text */
+    background-image: -webkit-linear-gradient(102deg, #006e2e, #579900);
+    background-clip: text; /* clips the text */
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    animation: changeColor 5s infinite linear; /* set animation */
+	-webkit-animation: changeColor 5s infinite linear; /* set animation */
+}
+
+/* animation declaration */
+
+@keyframes changeColor {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(-360deg);
+    }
+}
+
+/* section style */
+section
+{
+    margin-top: 100px;
+    /* flexbox sets child elements in specific direction */
+    display: flex;
+    justify-content: space-around;
+}
+
+/* image styling */
+section img
+{
+    width: 280px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* applys grayscale on image */
+section img:nth-child(1):hover
+{
+    filter: grayscale(1);
+}
+
+/* reduces opacity of the image */
+section img:nth-child(2):hover
+{
+    filter: opacity(0.5);
+}
+
+/* applys drop shadow on image */
+section img:nth-child(3):hover
+{
+    filter: drop-shadow(0 0 10px #003031);
+}
